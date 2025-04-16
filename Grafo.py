@@ -32,7 +32,6 @@ class Grafo:
             return 0
 
         if self.dirigido:
-            # Para grafos dirigidos, calculamos grado de entrada y salida
             grado_salida = len(nodo.obtener_vecinos())
             grado_entrada = sum(1 for n in self.obtener_nodos() if nodo in n.obtener_vecinos())
             return ('Entrada=' + str(grado_entrada), 'Salida=' + str(grado_salida))
@@ -108,14 +107,9 @@ class Grafo:
                 if self.distancia(i, j) <= distancia_max and self.existe_arista(i, j) == self.dirigido:
                     self.agregar_arista(i, j)
 
-    '''Colocar n vértices uno por uno, asignando a cada uno d aristas a vértices 
-    distintos de tal manera que la probabilidad de que el vértice nuevo se conecte 
-    a un vértice existente v es proporcional a la cantidad de aristas que v tiene 
-    actualmente - los primeros d vértices se conecta todos a todos'''
-
     def BarabasiAlbertInverso(self, Nodos, Conexiones):
         for n in range(1, Nodos + 1):
-            self.crearNodo(n)  # Crear el nuevo nodo
+            self.crearNodo(n) 
 
             conexiones_realizadas = 0
             candidatos = self.obtener_nodos()
@@ -124,11 +118,9 @@ class Grafo:
             for existente in candidatos:
                 val_existente = existente.obtener_valor()
 
-                # Evitar conectar consigo mismo y nodos ya saturados
                 if val_existente == n or self.grado_nodo(val_existente) >= Conexiones:
                     continue
 
-                # Probabilidad inversamente proporcional al grado
                 Pv = 1 - (self.grado_nodo(val_existente) / Conexiones)
 
                 if random.random() < Pv:
