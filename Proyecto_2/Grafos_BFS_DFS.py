@@ -1,0 +1,32 @@
+import Grafo as gr
+
+ErdosRenyi = gr.Grafo()
+ErdosRenyi.ErdosRenyi(Nodos=30,Aristas=60)
+#ErdosRenyi.archivo_grafo('ErdosRenyi50')
+arbol=ErdosRenyi.BFS(0)
+arbol2=ErdosRenyi.DFS_R(0)
+arbol3=ErdosRenyi.DFS_I(0)
+arbol.archivo_grafo('BFS_ErdosRenyi30')
+arbol2.archivo_grafo('DFS_R_ErdosRenyi30')
+arbol3.archivo_grafo('DFS_I_ErdosRenyi30')
+
+
+ErdosRenyi = gr.Grafo()
+ErdosRenyi.ErdosRenyi(Nodos=100,Aristas=200)
+#ErdosRenyi.archivo_grafo('ErdosRenyi200')
+arbol=ErdosRenyi.BFS(0)
+arbol2=ErdosRenyi.DFS_R(0)
+arbol3=ErdosRenyi.DFS_I(0)
+arbol.archivo_grafo('BFS_ErdosRenyi100')
+arbol2.archivo_grafo('DFS_R_ErdosRenyi100')
+arbol3.archivo_grafo('DFS_I_ErdosRenyi100')
+
+ErdosRenyi = gr.Grafo()
+ErdosRenyi.ErdosRenyi(Nodos=500,Aristas=1000)
+#ErdosRenyi.archivo_grafo('ErdosRenyi500')
+arbol=ErdosRenyi.BFS(0)
+arbol2=ErdosRenyi.DFS_R(0)
+arbol3=ErdosRenyi.DFS_I(0)
+arbol.archivo_grafo('BFS_ErdosRenyi500')
+arbol2.archivo_grafo('DFS_R_ErdosRenyi500')
+arbol3.archivo_grafo('DFS_I_ErdosRenyi500')
