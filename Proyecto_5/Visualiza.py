@@ -3,18 +3,18 @@ import pygame
 import imageio
 import random
 
-# create the main surface (or window)
+
 WIDTH, HEIGHT   = 800, 608
 BORDER          = 10
 WIN             = pygame.display.set_mode((WIDTH, HEIGHT))
 
-# colors
+# Colores
 BG              = (0, 0, 0)
 BLUE            = (69, 133, 136)
 BLACK           = (40, 40, 40)
 RED             = (157, 0, 6)
 
-# configuration
+# Configuración
 ITERS           = 500
 FPS             = 20
 NODE_RADIUS     = 5
