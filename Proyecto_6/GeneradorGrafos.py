@@ -123,6 +123,6 @@ visBH.BarnesHut(grafo)'''
 
 '''
 grafo =gr.Grafo()
-grafo.Malla(25,25)
+grafo.Malla(25,20)
 visBH.BarnesHut(grafo)
 '''
